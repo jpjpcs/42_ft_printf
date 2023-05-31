@@ -6,11 +6,11 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:11:24 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/30 15:19:12 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/31 12:16:20 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "ft_printf.h"
+include <ft_printf.h>
 
 int ft_putchar(char c)
 {
@@ -30,8 +30,23 @@ int ft_putstr(*str)
 	return (i);
 }
 
-int ft_putnbr(int)
+int ft_putnbr(int nb)
 {
+	long int n;
 	
-	
+	n = nb;
+	if (n < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr (n);	
+	}
+	if (n > 9)
+	{
+		ft_putnbr(n % 10);
+		ft_putnbr(n / 10);
+	}
+	if (n < 9)
+	{
+		ft_putchar(n + '0');
+	}
 }

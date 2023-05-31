@@ -6,14 +6,13 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 11:05:02 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/30 12:18:06 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/31 13:02:12 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "ft_printf.h"
+#include "ft_printf.h"
 
-int ft_conversions(va_list args, const char fs); // fs is the format specifier
-
+int ft_conversions(va_list args, const char fs) // fs is the format specifier
 {			
 	int len;
 
@@ -33,5 +32,4 @@ int ft_conversions(va_list args, const char fs); // fs is the format specifier
 	else if (fs == '%')
 		len += ft_putchar('%');
 	return (len);
-
 }

@@ -6,11 +6,11 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:11:24 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/31 12:16:20 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/31 13:00:05 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include <ft_printf.h>
+#include "ft_printf.h"
 
 int ft_putchar(char c)
 {
@@ -18,15 +18,16 @@ int ft_putchar(char c)
 	return (1);
 }
 
-int ft_putstr(*str)
+int ft_putstr(char *str)
 {
 	int i;
 
-	i = 0; 
+	i = 0;
 	if (!str)
 		return (ft_putstr("(null)"));
 	while (str[i])
 		ft_putchar(str[i++]);
+		i++;
 	return (i);
 }
 
@@ -36,6 +37,22 @@ int ft_putnbr(int nb)
 	
 	n = nb;
 	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n < 9)
+	{
+		ft_putchar(n + '0');
+	}
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	return (n);
+	
+	/* if (n < 0)
 	{
 		ft_putchar('-');
 		ft_putnbr (n);	
@@ -48,5 +65,14 @@ int ft_putnbr(int nb)
 	if (n < 9)
 	{
 		ft_putchar(n + '0');
-	}
+	} */
 }
+
+int main ()
+{
+  int n = -2147483648;
+  printf("\nNum is: %d\n", ft_putnbr(n));
+  ft_putnbr(n);
+  return (0);
+  }
+

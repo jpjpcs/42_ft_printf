@@ -6,13 +6,13 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:37:26 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/01 18:21:28 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/05 15:39:55 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "ft_printf.h"
+#include "ft_printf.h"
  
- int ft_printf(const char *str, ...);
+ int ft_printf(const char *str, ...)
  {
 	va_list args;		// va_list is a type to hold information about variable arguments
 	int i;			// count is the number of characters printed
@@ -38,7 +38,7 @@ include "ft_printf.h"
      
  }
 
- /*int		main(void)
+int		main(void)
 {
 	char	a;
 	char	*str;
@@ -57,39 +57,44 @@ include "ft_printf.h"
 	percent = '%';
 
 	// %c
-	write(1, "ft_c\n", 5);
+	write(1, "\nft_putchar\n", 5);
 	printf("%d\n", printf("%c\n", a));
 	printf("%d\n", ft_printf("%c\n", a));
 	printf("\n\n");
 
 	// %s
-	write(1, "ft_s\n", 5);
+	write(1, "ft_putstr\n", 5);
 	printf("%d\n", printf("%s\n", str));
 	printf("%d\n", ft_printf("%s\n", str));
 	printf("\n\n");
 
-	// %p
-	write(1, "ft_p\n", 5);
+	/* // %p
+	write(1, "ft_putptr\n", 5);
 	printf("%d\n", printf("%p\n", str2));
 	printf("%d\n", ft_printf("%p\n", str2));
-	printf("\n\n");
+	printf("\n\n"); */
+	
 	// %d
-	write(1, "ft_d\n", 5);
+	write(1, "ft_nbr\n", 5);
 	printf("%d\n", printf("%d\n", i));
 	printf("%d\n", ft_printf("%d\n", i));
 	printf("\n\n");
 
 	// %i
-	write(1, "ft_i\n", 5);
+	write(1, "ft_nbr\n", 5);
 	printf("%d\n", printf("%i\n", i));
 	printf("%d\n", ft_printf("%i\n", i));
 	printf("\n\n");
 
-	// %u
-	write(1, "ft_u\n", 5);
+  	int n = -2147483648;
+  	printf("\nNum is: %d\n", ft_putnbr(n));
+  	ft_putnbr(n);
+
+	/* // %u
+	write(1, "ft_unsigned\n", 5);
 	printf("%d\n", printf("%u\n", b));
 	printf("%d\n", ft_printf("%u\n", b));
-	printf("\n\n");
+	printf("\n\n"); */
 
 	// %x
 	write(1, "ft_x\n", 5);
@@ -108,4 +113,4 @@ include "ft_printf.h"
 	printf("%d\n", printf("%%\n"));
 	printf("%d\n", ft_printf("%%\n", percent));
 	printf("\n\n");
-}*/
+}

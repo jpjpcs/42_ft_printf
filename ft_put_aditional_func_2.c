@@ -6,13 +6,13 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:23:29 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/01 19:01:54 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/05 15:44:14 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_puthex(unsigned long long n, fs)
+int ft_puthex(unsigned long long n, const char fs)
 {   
     int count;
 
@@ -21,7 +21,7 @@ int ft_puthex(unsigned long long n, fs)
         count += ft_putchar(n + '0');
     if (n >= 10 && n <= 15)
     {
-        if(fs == 'x')
+        if (fs == 'x')
             count += ft_putchar (n - 10 + 'a');
         else
             count += ft_putchar (n - 10 + 'A');

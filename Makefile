@@ -6,7 +6,7 @@
 #    By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/18 12:27:05 by jode-jes          #+#    #+#              #
-#    Updated: 2023/06/01 18:26:09 by jode-jes         ###   ########.fr        #
+#    Updated: 2023/06/05 15:45:48 by jode-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ NAME = libftprintf.a #ou só printf.a
 SRC = ft_printf.c
 # 1.1. Sources to objects: variable bellow
 OBJS = ${SRC:.c=.o} # it takes everything that its a source file (.c) and creates object files #transforms every c. file into an o. file(object file)
-HEADER = printf.h #creates the name of the header
+HEADER = ft_printf.h #creates the name of the header
 INCLUDE = -I . #include the headers (the .h files)
 CC = cc #run the compiler
 RM = rm -f #deletes. forces to delete.

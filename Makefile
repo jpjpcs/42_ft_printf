@@ -6,7 +6,7 @@
 #    By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/18 12:27:05 by jode-jes          #+#    #+#              #
-#    Updated: 2023/06/05 15:45:48 by jode-jes         ###   ########.fr        #
+#    Updated: 2023/06/05 15:59:18 by jode-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@
 # 1. Variables (expl -> NAME (variable) = libft.a (variable value))
 
 NAME = libftprintf.a #ou só printf.a
-SRC = ft_printf.c
+SRC = ft_printf.c ft_conversions.c ft_put_aditional_func_1.c ft_put_aditional_func_2.c
 # 1.1. Sources to objects: variable bellow
 OBJS = ${SRC:.c=.o} # it takes everything that its a source file (.c) and creates object files #transforms every c. file into an o. file(object file)
 HEADER = ft_printf.h #creates the name of the header

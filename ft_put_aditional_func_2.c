@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:23:29 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/05 15:44:14 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:42:39 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int ft_puthex(unsigned long long n, const char fs)
     }
     if (n >= 16)
     {
-        ft_puthex(n / 16, fs);
-        ft_puthex(n % 16, fs);
+        count += ft_puthex(n / 16, fs);
+        count += ft_puthex(n % 16, fs);
     }
    return (count);
 }

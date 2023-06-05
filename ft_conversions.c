@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 11:05:02 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/01 18:41:52 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/05 15:54:29 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 		len += ft_putnbr(va_arg(args, int));
 	else if (fs == 'x' || fs == 'X')
 		len += ft_puthex(va_arg(args, unsigned long long), fs);	//here we pass the fs (format specifier) because we don´t know if we´re going to pass an x or X
-	else if (fs == 'p')
+/* 	else if (fs == 'p')
 		len += ft_putptr(va_arg(args, unsigned long long));	
 	else if (fs == 'u')
-		len += ft_unsigned(va_arg(args, unsigned int));
+		len += ft_unsigned(va_arg(args, unsigned int)); */
 	else if (fs == '%')
 		len += ft_putchar('%');
 	return (len);

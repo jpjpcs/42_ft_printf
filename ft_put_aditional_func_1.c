@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:11:24 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/05 15:29:30 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:34:31 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,31 +26,32 @@ int ft_putstr(char *str)
 	if (!str)
 		return (ft_putstr("(null)"));
 	while (str[i])
-		ft_putchar(str[i]);
-		i++;
+		ft_putchar(str[i++]);
 	return (i);
 }
 
 int ft_putnbr(int nb)
 {
 	long int n;
+	int count;
 	
 	n = nb;
+	count = 0;
 	if (n < 0)
 	{
-		ft_putchar('-');
+		count += ft_putchar('-');
 		n = -n;
 	}
 	if (n <= 9)
 	{
-		ft_putchar(n + '0');
+		count += ft_putchar(n + '0');
 	}
 	if (n >= 10)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		count += ft_putnbr(n / 10);
+		count += ft_putnbr(n % 10);
 	}
-	return (n);
+	return (count);
 }
 
 

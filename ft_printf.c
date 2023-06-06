@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:37:26 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/05 16:52:54 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/05 18:05:24 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,12 +82,12 @@ int		main(void)
 
 	// %i
 	write(1, "\nft_nbr:\n", 9);
-	printf("%d\n", printf("%i\n", i));
-	printf("%d\n", ft_printf("%i\n", i));
+	printf("Num is %d\n", printf("%i\n", i));
+	printf("Num is %d\n", ft_printf("%i\n", i));
 	printf("\n\n");
 
    	int n = -2147483648;
-  	printf("\nNum is: %d\n", ft_putnbr(n));
+  	printf("\nNum is: %d\n", ft_printf("%i\n", n));
   	ft_putnbr(n);
 
 	/* // %u

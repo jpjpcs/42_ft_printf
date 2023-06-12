@@ -21,7 +21,7 @@
 
 # 1. Variables (expl -> NAME (variable) = libft.a (variable value))
 
-NAME = libftprintf.a #ou só printf.a
+NAME = libftprintf.a
 SRC = ft_printf.c ft_conversions.c ft_put_aditional_func_1.c ft_put_aditional_func_2.c
 # 1.1. Sources to objects: variable bellow
 OBJS = ${SRC:.c=.o} # it takes everything that its a source file (.c) and creates object files #transforms every c. file into an o. file(object file)

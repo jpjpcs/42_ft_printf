@@ -12,15 +12,15 @@
 
 #include "ft_printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
 }
 
-int ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!str)
@@ -30,11 +30,11 @@ int ft_putstr(char *str)
 	return (i);
 }
 
-int ft_putnbr(int nb)
+int	ft_putnbr(int nb)
 {
-	long int n;
-	int count;
-	
+	long int	n;
+	int			count;
+
 	n = nb;
 	count = 0;
 	if (n < 0)
@@ -53,6 +53,3 @@ int ft_putnbr(int nb)
 	}
 	return (count);
 }
-
-
-

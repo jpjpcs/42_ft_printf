@@ -6,39 +6,38 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:37:26 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/12 16:25:40 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/12 19:22:10 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
- 
- int ft_printf(const char *str, ...)
- {
-	va_list args;		// va_list is a type to hold information about variable arguments
-	int i;			// count is the number of characters printed
-	int len;			// len is the length of the string
 
+int	ft_printf(const char *str, ...)
+{
+	va_list args;
+		// va_list is a type to hold information about variable arguments
+	int i;        // count is the number of characters printed
+	int len;      // len is the length of the string
 	i = 0;
 	len = 0;
-	
-	va_start(args, str);	// va_start is a macro to initialize the va_list
-	while (str[i])	
+	va_start(args, str); // va_start is a macro to initialize the va_list
+	while (str[i])
 	{
 		if (str[i] == '%')
 		{
 			i++;
-			len += ft_conversions(args,str[i]);
+			len += ft_conversions(args, str[i]);
 		}
 		else
 			len += ft_putchar(str[i]);
 		i++;
 	}
-	va_end(args);		// va_end is a macro to clean up the memory assigned to the va_list
-	return (len);	// return the number of characters printed
-     
- }
+	va_end(args);
+		// va_end is a macro to clean up the memory assigned to the va_list
+	return (len); // return the number of characters printed
+}
 
-int		main(void)
+/* int		main(void)
 {
 	char	a;
 	char	*str;
@@ -70,7 +69,7 @@ int		main(void)
 	write(1, "\nft_putptr\n", 11);
 	printf("%d char\n", printf("%p\n", str2));
 	ft_printf("%d char\n", ft_printf("%p\n", str2));
-	 
+		
  	// %d
 	write(1, "\nft_nbr d:\n", 11);
 	printf("%d char\n", printf("%d\n", i));
@@ -87,11 +86,10 @@ int		main(void)
 	ft_printf("\nNum is: %i\n", n);
 	printf("Num is: %i\n", n);	
 
-	/* // %u
+	// %u
 	write(1, "\nft_unsigned\n", 13);
 	printf("%d\n", printf("%u\n", b));
 	printf("%d\n", ft_printf("%u\n", b));
-	*/
 
 	// %x
 	write(1, "\nft_x:\n", 7);
@@ -108,4 +106,4 @@ int		main(void)
 	printf("%d\n", printf("%%\n"));
 	ft_printf("%d\n", ft_printf("%%\n", percent));
 	printf("\n");
-}
+} */

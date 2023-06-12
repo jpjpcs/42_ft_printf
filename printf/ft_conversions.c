@@ -12,8 +12,8 @@
 
 #include "ft_printf.h"
 
- int ft_conversions(va_list args, const char fs) // fs is the format specifier
-{			
+int	ft_conversions(va_list args, const char fs) // fs is the format specifier
+{
 	int len;
 
 	len = 0;
@@ -24,9 +24,10 @@
 	else if (fs == 'd' || fs == 'i')
 		len += ft_putnbr(va_arg(args, int));
 	else if (fs == 'x' || fs == 'X')
-		len += ft_puthex(va_arg(args, unsigned long long), fs);	//here we pass the fs (format specifier) because we don´t know if we´re going to pass an x or X
- 	else if (fs == 'p')
-		len += ft_putptr(va_arg(args, unsigned long long));	
+		len += ft_puthex(va_arg(args, unsigned long long), fs);
+			//here we pass the fs (format specifier) because we don´t know if we´re going to pass an x or X
+	else if (fs == 'p')
+		len += ft_putptr(va_arg(args, unsigned long long));
 	else if (fs == 'u')
 		len += ft_unsigned(va_arg(args, unsigned int));
 	else if (fs == '%')
@@ -34,6 +35,6 @@
 	return (len);
 }
 
-//no putchar, pq não lhe passo um char em vez de um int, ou pq não recebe um int em vez de um char?!
+//no putchar, pq não lhe passo um char em vez de um int,
+	ou pq não recebe um int em vez de um char?!
 // no puthex pode ser unsigned int como no ft_unsigned em vez de unsigned long long? e no putprt podemos usar void em vez de unsigned long long?
- 

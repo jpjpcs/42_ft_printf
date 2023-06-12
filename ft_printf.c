@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:37:26 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/05 18:05:24 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:25:40 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,58 +59,53 @@ int		main(void)
 	// %c
 	write(1, "\nft_putchar:\n", 13);
 	printf("%d\n", printf("%c\n", a));
-	printf("%d\n", ft_printf("%c\n", a));
-	printf("\n\n");
-
+	ft_printf("%d\n", ft_printf("%c\n", a));
+	
  	// %s
 	write(1, "\nft_putstr:\n", 12);
-	printf("%d\n", printf("%s\n", str));
-	printf("%d\n", ft_printf("%s\n", str));
-	printf("\n\n");
-
-	/* // %p
-	write(1, "\nft_putptr\n", 11);
-	printf("%d\n", printf("%p\n", str2));
-	printf("%d\n", ft_printf("%p\n", str2));
-	printf("\n\n"); */
+	printf("%d char\n", printf("%s\n", str));
+	ft_printf("%d char\n", ft_printf("%s\n", str));
 	
+	// %p
+	write(1, "\nft_putptr\n", 11);
+	printf("%d char\n", printf("%p\n", str2));
+	ft_printf("%d char\n", ft_printf("%p\n", str2));
+	 
  	// %d
-	write(1, "\nft_nbr:\n", 9);
-	printf("%d\n", printf("%d\n", i));
-	printf("%d\n", ft_printf("%d\n", i));
-	printf("\n\n");
+	write(1, "\nft_nbr d:\n", 11);
+	printf("%d char\n", printf("%d\n", i));
+	ft_printf("%d char\n", ft_printf("%d\n", i));
 
 	// %i
-	write(1, "\nft_nbr:\n", 9);
-	printf("Num is %d\n", printf("%i\n", i));
-	printf("Num is %d\n", ft_printf("%i\n", i));
-	printf("\n\n");
-
-   	int n = -2147483648;
-  	printf("\nNum is: %d\n", ft_printf("%i\n", n));
-  	ft_putnbr(n);
+	write(1, "\nft_nbr i:\n", 11);
+	printf("%d char\n", printf("%i\n", i));
+	ft_printf("%d char\n", ft_printf("%i\n", i));
+   	
+	int n = -2147483648;
+  	ft_printf("\nNum is: %d\n", n);
+	printf("Num is: %d\n", n);	
+	ft_printf("\nNum is: %i\n", n);
+	printf("Num is: %i\n", n);	
 
 	/* // %u
 	write(1, "\nft_unsigned\n", 13);
 	printf("%d\n", printf("%u\n", b));
 	printf("%d\n", ft_printf("%u\n", b));
-	printf("\n\n"); */
+	*/
 
 	// %x
-	write(1, "\n\n\nft_x:\n", 9);
+	write(1, "\nft_x:\n", 7);
 	printf("%d\n", printf("%x\n", hex));
-	printf("%d\n", ft_printf("%x\n", hex));
-	printf("\n\n");
+	ft_printf("%d\n", ft_printf("%x\n", hex));
 
 	// %X
 	write(1, "\nft_X:\n", 7);
 	printf("%d\n", printf("%X\n", hex));
-	printf("%d\n", ft_printf("%X\n", hex));
-	printf("\n\n"); 
+	ft_printf("%d\n", ft_printf("%X\n", hex));
 
 	// %%
 	write(1, "\nft_percent:\n", 13);
 	printf("%d\n", printf("%%\n"));
-	printf("%d\n", ft_printf("%%\n", percent));
-	printf("\n\n");
+	ft_printf("%d\n", ft_printf("%%\n", percent));
+	printf("\n");
 }

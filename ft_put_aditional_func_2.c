@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:23:29 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/05 18:28:54 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:41:12 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,34 @@ int ft_puthex(unsigned long long n, const char fs)
 int ft_putptr(unsigned long ptr)
 {
     int count;
-
+    char *str = "(nill)";
+    char *str2 = "0x";
+    
     count = 0; 
     if (!ptr)
-        return (count += ft_putchar("(nill)"));
-    else
     {
-        count += ft_putchar("0x");
+        count += ft_putstr(str);
+        return (count); 
+    } 
+    else
+    {   
+        count += ft_putstr(str2);
         count += ft_puthex((unsigned long) ptr,'x');
     }
     return (count);   
+}
+
+int ft_unsigned(unsigned int unsigned_nb)
+{
+    int count;
+
+    count = 0;
+    if (unsigned_nb <= 9)
+        count += ft_putchar(unsigned_nb + '0');
+    if (unsigned_nb >= 10)
+    {
+        count += ft_putnbr(unsigned_nb / 10);
+        count += ft_putnbr(unsigned_nb % 10);
+    }
+    return (count);
 }

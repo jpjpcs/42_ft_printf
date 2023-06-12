@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:38:43 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/05 18:21:23 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:36:33 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int ft_putstr(char *str);
 int ft_putnbr(int nb);
 int ft_puthex(unsigned long long n, const char fs);
 int ft_putptr(unsigned long ptr);
+int ft_unsigned(unsigned int unsigned_nb);
 
 #endif

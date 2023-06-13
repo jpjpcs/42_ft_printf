@@ -6,34 +6,24 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:38:43 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/12 16:36:33 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/13 12:23:22 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# include <ctype.h>
-# include <stdbool.h>
-# include <stddef.h>
 # include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
-# include <stdarg.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-int ft_conversions(va_list args, const char fs);
-int ft_putchar(char c);
-int ft_putstr(char *str);
-int ft_putnbr(int nb);
-int ft_puthex(unsigned long long n, const char fs);
-int ft_putptr(unsigned long ptr);
-int ft_unsigned(unsigned int unsigned_nb);
+int					ft_printf(const char *str, ...);
+int					ft_conversions(va_list args, char fs);
+int					ft_putchar(char c);
+int					ft_putstr(char *str);
+int					ft_putnbr(int nb);
+int					ft_puthex(unsigned int n, const char fs);
+int					ft_puthexptr(unsigned long long n, const char fs);
+int					ft_putptr(unsigned long long ptr);
+int					ft_unsigned(unsigned int unsigned_nb);
 
 #endif

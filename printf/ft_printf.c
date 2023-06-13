@@ -41,7 +41,7 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-/* int		main(void)
+/*int		main(void)
 {
 	char	a;
 	char	*str;
@@ -110,4 +110,4 @@ int	ft_printf(const char *str, ...)
 	printf("%d\n", printf("%%\n"));
 	ft_printf("%d\n", ft_printf("%%\n", percent));
 	printf("\n");
-} */
+}*/

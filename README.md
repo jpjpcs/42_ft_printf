@@ -27,9 +27,11 @@ Using the libtool command is forbidden.
 • Your libftprintf.a has to be created at the root of your repository.
 
 ### Bonus
-I haven´t made the bonus part.
+I haven´t made the bonus part. If you want to make it with bonus, see Luis Valsa github: https://github.com/LuisBalsa/ft_printf/tree/master
 
 ### Videos
 ```Markdown
 https://www.youtube.com/watch?v=dqa0KMSMx2w
 ```
+
+
